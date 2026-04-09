@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Business Nexus</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+  <h1>Business Nexus By Toseef</h1>
+</header>
+<!-- Login -->
+  <div class="card">
+    <h2>🔐 Login</h2>
+    <input id="email" placeholder="Email"><br><br>
+    <input id="password" placeholder="Password"><br><br>
+    <input id="otp" placeholder="OTP"><br><br>
+    <button onclick="login()">Login</button>
+    <p id="loginMsg"></p>
+  </div>
+<div class="container">
+
+  <!-- Calendar -->
+  <div class="card">
+    <h2>📅 Meeting Calendar</h2>
+    <p id="meeting">Meeting: 10 April 2026</p>
+    <button onclick="acceptMeeting()">Accept</button>
+    <button onclick="declineMeeting()">Decline</button>
+  </div>
+
+  <!-- Video -->
+  <div class="card">
+    <h2>📹 Video Call</h2>
+    <button onclick="startCall()">Start</button>
+    <button onclick="endCall()">End</button>
+    <p id="callStatus">Call Status: Off</p>
+  </div>
+
+  <!-- Documents -->
+  <div class="card">
+    <h2>📄 Documents</h2>
+    <input type="file"><br><br>
+
+    <select id="docStatus" onchange="updateStatus()">
+      <option>Draft</option>
+      <option>Review</option>
+      <option>Signed</option>
+    </select>
+
+    <p id="statusText">Status: Draft</p>
+
+    <input id="signature" placeholder="Type Signature"><br><br>
+    <button onclick="signDoc()">Sign</button>
+  </div>
+
+  <!-- Payment -->
+  <div class="card">
+    <h2>💳 Wallet</h2>
+    <p id="balance">Balance: $1000</p>
+
+    <button onclick="deposit()">Deposit</button>
+    <button onclick="withdraw()">Withdraw</button>
+
+    <h3>Transactions</h3>
+    <table>
+      <tr>
+        <th>Amount</th>
+        <th>User</th>
+        <th>Status</th>
+      </tr>
+      <tbody id="transactions"></tbody>
+    </table>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
